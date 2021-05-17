@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Junaid Mansur Ifti\\source\\repos\\DatingApp\\DatingApp.csproj": {}
+    "D:\\Dotnet Codes\\DotNetAngular\\DatingApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Junaid Mansur Ifti\\source\\repos\\DatingApp\\DatingApp.csproj": {
+    "D:\\Dotnet Codes\\DotNetAngular\\DatingApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Junaid Mansur Ifti\\source\\repos\\DatingApp\\DatingApp.csproj",
+        "projectUniqueName": "D:\\Dotnet Codes\\DotNetAngular\\DatingApp.csproj",
         "projectName": "DatingApp",
-        "projectPath": "C:\\Users\\Junaid Mansur Ifti\\source\\repos\\DatingApp\\DatingApp.csproj",
-        "packagesPath": "C:\\Users\\Junaid Mansur Ifti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Junaid Mansur Ifti\\source\\repos\\DatingApp\\obj\\",
+        "projectPath": "D:\\Dotnet Codes\\DotNetAngular\\DatingApp.csproj",
+        "packagesPath": "C:\\Users\\iftit\\.nuget\\packages\\",
+        "outputPath": "D:\\Dotnet Codes\\DotNetAngular\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Junaid Mansur Ifti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\iftit\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
