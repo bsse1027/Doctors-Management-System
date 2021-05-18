@@ -9,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace DatingApp.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class UsersController : ControllerBase
+    
+    public class UsersController : BaseApiController
     {
         private readonly ApplicationDbContext _db;
         public UsersController(ApplicationDbContext db)

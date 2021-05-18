@@ -4,17 +4,14 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DatingApp.Models
+namespace DatingApp.Controllers.DTOs
 {
-    public class Users
+    public class RegisterDto
     {
-        [Key]
-        public int Id { get; set; }
+        [Required]
         public string Username { get; set; }
 
-        public byte[] PasswordHash { get; set; }
-
-        public byte[] PasswordSalt { get; set; }
+        [Required]
+        public string Password { get; set; }
     }
-
 }
