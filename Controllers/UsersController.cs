@@ -1,5 +1,6 @@
 ﻿using DatingApp.Data;
 using DatingApp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -18,6 +19,7 @@ namespace DatingApp.Controllers
             _db = db;
 
         }
+        [AllowAnonymous]
         [HttpGet]
 
         public async Task<ActionResult<IEnumerable<Users>>> GetUsers()
@@ -26,6 +28,7 @@ namespace DatingApp.Controllers
         }
 
         //api/users/3
+        [Authorize]
         [HttpGet("{id}")]
 
         public async Task<ActionResult<Users>> GetUsers(int id)

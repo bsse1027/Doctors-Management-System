@@ -698,7 +698,6 @@ D:\Dotnet Codes\DotNetAngular\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.d
 D:\Dotnet Codes\DotNetAngular\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 D:\Dotnet Codes\DotNetAngular\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\Dotnet Codes\DotNetAngular\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-D:\Dotnet Codes\DotNetAngular\bin\Debug\net5.0\Newtonsoft.Json.dll
 D:\Dotnet Codes\DotNetAngular\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 D:\Dotnet Codes\DotNetAngular\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 D:\Dotnet Codes\DotNetAngular\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
@@ -780,3 +779,4 @@ D:\Dotnet Codes\DotNetAngular\bin\Debug\net5.0\client\tsconfig.app.json
 D:\Dotnet Codes\DotNetAngular\bin\Debug\net5.0\client\tsconfig.json
 D:\Dotnet Codes\DotNetAngular\bin\Debug\net5.0\client\tsconfig.spec.json
 D:\Dotnet Codes\DotNetAngular\bin\Debug\net5.0\client\tslint.json
+D:\Dotnet Codes\DotNetAngular\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
