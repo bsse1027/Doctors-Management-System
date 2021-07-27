@@ -17,5 +17,9 @@ namespace DoctorManagement.Data
         public DbSet<Doctors> Users { get; set; }
 
         public DbSet<Medicines> Medicines { get; set; }
+
+        public DbSet<Patients> Patients { get; set; }
+
+
     }
 }

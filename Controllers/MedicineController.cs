@@ -20,6 +20,8 @@ namespace DoctorManagement.Controllers
 
         }
 
+        //api/medicine/add
+
         [Authorize]
         [HttpPost("add")]
 
@@ -47,25 +49,44 @@ namespace DoctorManagement.Controllers
         }
 
 
-
+        //GetALL
         [Authorize]
         [HttpGet]
 
-        public async Task<ActionResult<IEnumerable<Medicines>>> showRegs()
+        public async Task<ActionResult<IEnumerable<Medicines>>> GetAll()
         {
-            return await _db.Medicines.ToListAsync();
+            
+            var med = await _db.Medicines.ToListAsync();
+
+            if(med == null)
+            {
+                return NotFound();
+            }
+
+            return med;
         }
 
 
+        //api/medicine/name
 
         [Authorize]
         [HttpGet("{name}")]
 
-        public async Task<ActionResult<Medicines>> GetMedicines(String name)
+        public async Task<ActionResult<Medicines>> GetOne(String name)
         {
-            var med = await _db.Medicines.SingleOrDefaultAsync(x=>x.Name == name);
+            try
+            {
+                var med = await _db.Medicines.SingleOrDefaultAsync(x => x.Name == name);
 
-            return med;
+                return med;
+
+            }
+
+            catch
+            {
+                return NotFound();
+            }
+            
             
             //return await _db.Medicines.FindAsync(name);
         }
