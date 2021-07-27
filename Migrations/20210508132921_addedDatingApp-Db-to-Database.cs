@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace DatingApp.Migrations
+namespace DoctorManagement.Migrations
 {
     public partial class addedDatingAppDbtoDatabase : Migration
     {

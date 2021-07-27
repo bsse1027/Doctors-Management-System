@@ -1,6 +1,6 @@
 using System;
 
-namespace DatingApp
+namespace DoctorManagement
 {
     public class WeatherForecast
     {

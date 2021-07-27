@@ -1,7 +1,8 @@
-﻿using DatingApp.Controllers.DTOs;
-using DatingApp.Data;
-using DatingApp.Interfaces;
-using DatingApp.Models;
+﻿using DoctorManagement.Controllers;
+using DoctorManagement.Controllers.DTOs;
+using DoctorManagement.Data;
+using DoctorManagement.Interfaces;
+using DoctorManagement.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -11,7 +12,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DatingApp.Controllers
+namespace DoctorManagement.Controllers
 {
     public class AccountController : BaseApiController
     {
@@ -26,30 +27,33 @@ namespace DatingApp.Controllers
 
         [HttpGet]
 
-        public async Task<ActionResult<IEnumerable<Users>>> showRegs()
+        public async Task<ActionResult<IEnumerable<Doctors>>> showRegs()
         {
             return await _db.Users.ToListAsync();
         }
-        
 
-        
+
+
         [HttpPost("register")]
 
         public async Task<ActionResult<UserDto>> Register(RegisterDto regDto)
         {
             using var hmac = new HMACSHA512();
 
-            if(await UserExists(regDto.Username))
+            if (await UserExists(regDto.Username))
             {
                 return BadRequest("Username is not unique");
             }
 
-            var user = new Users
+            var user = new Doctors
             {
+                DoctorName = regDto.DoctorName,
+                HospitalName = regDto.HospitalName,
+                Designation = regDto.Designation,
                 Username = regDto.Username.ToLower(),
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(regDto.Password)),
                 PasswordSalt = hmac.Key
-            
+
             };
 
             _db.Users.Add(user);
@@ -69,7 +73,7 @@ namespace DatingApp.Controllers
         {
             var user = await _db.Users.SingleOrDefaultAsync(x => x.Username == logDto.Username);
 
-            if(user == null)
+            if (user == null)
             {
                 return Unauthorized("Invalid Username");
             }
@@ -78,17 +82,17 @@ namespace DatingApp.Controllers
 
             var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(logDto.Password));
 
-            for(int i =0; i< computedHash.Length; i++)
+            for (int i = 0; i < computedHash.Length; i++)
             {
                 if (computedHash[i] != user.PasswordHash[i])
                     return Unauthorized("Invalid Password");
             }
 
             return new UserDto
-            { 
+            {
                 Username = user.Username,
                 Token = _tokenService.addToken(user)
-            
+
             };
 
         }

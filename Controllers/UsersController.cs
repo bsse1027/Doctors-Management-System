@@ -1,5 +1,5 @@
-﻿using DatingApp.Data;
-using DatingApp.Models;
+﻿using DoctorManagement.Data;
+using DoctorManagement.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DatingApp.Controllers
+namespace DoctorManagement.Controllers
 {
     
     public class UsersController : BaseApiController
@@ -22,7 +22,7 @@ namespace DatingApp.Controllers
         [AllowAnonymous]
         [HttpGet]
 
-        public async Task<ActionResult<IEnumerable<Users>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<Doctors>>> GetUsers()
         {
             return await _db.Users.ToListAsync();
         }
@@ -31,7 +31,7 @@ namespace DatingApp.Controllers
         [Authorize]
         [HttpGet("{id}")]
 
-        public async Task<ActionResult<Users>> GetUsers(int id)
+        public async Task<ActionResult<Doctors>> GetUsers(int id)
         {
             return await _db.Users.FindAsync(id);
         }

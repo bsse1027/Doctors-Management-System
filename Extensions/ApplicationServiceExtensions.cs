@@ -1,6 +1,6 @@
-﻿using DatingApp.Data;
-using DatingApp.Interfaces;
-using DatingApp.Services;
+﻿using DoctorManagement.Data;
+using DoctorManagement.Interfaces;
+using DoctorManagement.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DatingApp.Extensions
+namespace DoctorManagement.Extensions
 {
     public static class ApplicationServiceExtensions
     {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D+kv/Xot2zhe6IKoNXdwqodnJdP5CZ4DE30wbdgWON0ZW5sxfDurjHirKw0dfrmtpq9ByA3jjRs0rpi45P1vGg==",
+  "dgSpecHash": "GjydzaHXyErd0GAxYDPlF0QLMpkdbL2q33aw/Cvbd9z2RxxphCXLmeY6wTrcuBkneBAGtAVBVi2eAsoIDYO6sg==",
   "success": true,
-  "projectFilePath": "D:\\Dotnet Codes\\DotNetAngular\\DatingApp.csproj",
+  "projectFilePath": "D:\\Dotnet Codes\\DotNetAngular\\DoctorManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\iftit\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\iftit\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.5\\microsoft.aspnetcore.authentication.jwtbearer.5.0.5.nupkg.sha512",

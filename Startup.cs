@@ -1,7 +1,7 @@
-using DatingApp.Data;
-using DatingApp.Extensions;
-using DatingApp.Interfaces;
-using DatingApp.Services;
+using DoctorManagement.Data;
+using DoctorManagement.Extensions;
+using DoctorManagement.Interfaces;
+using DoctorManagement.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -17,7 +17,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DatingApp
+namespace DoctorManagement
 {
     public class Startup
     {

@@ -1,13 +1,13 @@
-﻿using DatingApp.Models;
+﻿using DoctorManagement.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DatingApp.Interfaces
+namespace DoctorManagement.Interfaces
 {
     public interface ITokenService
     {
-        string addToken(Users user);
+        string addToken(Doctors user);
     }
 }

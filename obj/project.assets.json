@@ -5963,9 +5963,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dotnet Codes\\DotNetAngular\\DatingApp.csproj",
-      "projectName": "DatingApp",
-      "projectPath": "D:\\Dotnet Codes\\DotNetAngular\\DatingApp.csproj",
+      "projectUniqueName": "D:\\Dotnet Codes\\DotNetAngular\\DoctorManagement.csproj",
+      "projectName": "DoctorManagement",
+      "projectPath": "D:\\Dotnet Codes\\DotNetAngular\\DoctorManagement.csproj",
       "packagesPath": "C:\\Users\\iftit\\.nuget\\packages\\",
       "outputPath": "D:\\Dotnet Codes\\DotNetAngular\\obj\\",
       "projectStyle": "PackageReference",

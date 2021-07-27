@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DatingApp.Extensions
+namespace DoctorManagement.Extensions
 {
     public static class IdentityServiceExtensions
     {

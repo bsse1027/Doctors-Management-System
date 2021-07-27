@@ -1,4 +1,4 @@
-﻿using DatingApp.Models;
+﻿using DoctorManagement.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DatingApp.Controllers
+namespace DoctorManagement.Controllers
 {
     public class HomeController : Controller
     {

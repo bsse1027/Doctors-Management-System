@@ -1,11 +1,11 @@
-﻿using DatingApp.Models;
+﻿using DoctorManagement.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DatingApp.Data
+namespace DoctorManagement.Data
 {
     public class ApplicationDbContext :DbContext
     {
@@ -14,6 +14,8 @@ namespace DatingApp.Data
 
         }
 
-        public DbSet<Users> Users { get; set; }
+        public DbSet<Doctors> Users { get; set; }
+
+        public DbSet<Medicines> Medicines { get; set; }
     }
 }

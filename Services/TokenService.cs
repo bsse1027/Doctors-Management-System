@@ -1,5 +1,5 @@
-﻿using DatingApp.Interfaces;
-using DatingApp.Models;
+﻿using DoctorManagement.Interfaces;
+using DoctorManagement.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -10,7 +10,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DatingApp.Services
+namespace DoctorManagement.Services
 {
     public class TokenService : ITokenService
     {
@@ -20,7 +20,7 @@ namespace DatingApp.Services
             _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["TokenKey"]));
 
         }
-        public string addToken(Users user)
+        public string addToken(Doctors user)
         {
             var claims = new List<Claim>
             {

@@ -1,6 +1,6 @@
 using System;
 
-namespace DatingApp.Models
+namespace DoctorManagement.Models
 {
     public class ErrorViewModel
     {

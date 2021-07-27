@@ -14,20 +14,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "D:\Dotnet Codes\DotNetAngular\Views\_ViewImports.cshtml"
-using DatingApp;
+using DoctorManagement;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "D:\Dotnet Codes\DotNetAngular\Views\_ViewImports.cshtml"
-using DatingApp.Models;
+using DoctorManagement.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c773b7195bab64d8388ab62616763df9c3c4171c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8916e8ea13798741d72aecf1685b92662a7d37d4", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

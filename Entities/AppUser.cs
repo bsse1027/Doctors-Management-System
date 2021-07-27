@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DatingApp.Entities
+namespace DoctorManagement.Entities
 {
     public class AppUser
     {
