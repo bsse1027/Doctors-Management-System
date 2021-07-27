@@ -3,6 +3,7 @@ using DoctorManagement.Controllers.DTOs;
 using DoctorManagement.Data;
 using DoctorManagement.Interfaces;
 using DoctorManagement.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -62,7 +63,7 @@ namespace DoctorManagement.Controllers
             return new UserDto
             {
                 Username = user.Username,
-                Token = _tokenService.addToken(user)
+                //Token = _tokenService.addToken(user)
 
             };
         }
@@ -101,6 +102,41 @@ namespace DoctorManagement.Controllers
         {
             return await _db.Users.AnyAsync(x => x.Username == username.ToLower());
 
+        }
+
+        //UpdateDcotor
+
+        [Authorize]
+
+        // PUT: api/account/5
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdatePatients(int id, Doctors inputUser)
+        {
+            if (id != inputUser.Id)
+            {
+                return BadRequest();
+            }
+
+            _db.Entry(inputUser).State = EntityState.Modified;
+
+            try
+            {
+                await _db.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (await UserExists(inputUser.Username) == false)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return Ok("Updated");
         }
 
 

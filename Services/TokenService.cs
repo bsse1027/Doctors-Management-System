@@ -32,7 +32,7 @@ namespace DoctorManagement.Services
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.Now.AddDays(10),
+                Expires = DateTime.Now.AddDays(1),
                 SigningCredentials = creds
 
             };
