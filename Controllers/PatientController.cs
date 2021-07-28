@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace DoctorManagement.Controllers
 {
-    
+
     public class PatientController : BaseApiController
     {
         private readonly ApplicationDbContext _db;
@@ -86,7 +86,7 @@ namespace DoctorManagement.Controllers
 
             else return BadRequest();
 
-            
+
         }
 
         //UpdatePatient
@@ -94,7 +94,7 @@ namespace DoctorManagement.Controllers
         [Authorize]
 
         // PUT: api/Patient/5
-      
+
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdatePatients(int id, Patients inputPatient)
         {
@@ -111,7 +111,7 @@ namespace DoctorManagement.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if ( await PatientExists(id)==false)
+                if (await PatientExists(id) == false)
                 {
                     return NotFound();
                 }
