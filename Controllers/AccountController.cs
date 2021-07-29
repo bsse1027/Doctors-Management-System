@@ -98,7 +98,8 @@ namespace DoctorManagement.Controllers
 
         }
 
-        private async Task<bool> UserExists(string username)
+        private async Task<
+            bool> UserExists(string username)
         {
             return await _db.Users.AnyAsync(x => x.Username == username.ToLower());
 
@@ -130,6 +131,7 @@ namespace DoctorManagement.Controllers
             }
 
 
+
             _db.Entry(inputUser).State = EntityState.Modified;
 
             try
@@ -138,7 +140,7 @@ namespace DoctorManagement.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (await UserExistsByID(id)==false)
+                if (await UserExistsByID(id) == false)
                 {
                     return BadRequest("Id doesn't exists");
                 }
