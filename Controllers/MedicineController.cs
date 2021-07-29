@@ -90,5 +90,25 @@ namespace DoctorManagement.Controllers
             
             //return await _db.Medicines.FindAsync(name);
         }
+
+        //Delete Medicine
+
+        [Authorize]
+
+        // DELETE: api/medicine/5
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Medicines>> DeleteMedicine(int id)
+        {
+            var med = await _db.Medicines.FindAsync(id);
+            if (med == null)
+            {
+                return NotFound();
+            }
+
+            _db.Medicines.Remove(med);
+            await _db.SaveChangesAsync();
+
+            return med;
+        }
     }
 }

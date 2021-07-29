@@ -125,10 +125,10 @@ namespace DoctorManagement.Controllers
                 return BadRequest();
             }
 
-            if (await UserExists(inputUser.Username))
-            {
-                return BadRequest("Username's taken");
-            }
+            //if (await UserExists(inputUser.Username))
+            //{
+            //    return BadRequest("Username's taken");
+            //}
 
 
 
